@@ -11,15 +11,21 @@ class gui_book:
         # labels
         l1= t.Label(self.m,text="Title");l2= t.Label(self.m,text="Author");l3= t.Label(self.m,text="Year");l4= t.Label(self.m,text="ISBN")
         # entry box
-        self.e1_val=t.StringVar();self.e2_val=t.StringVar();self.e3_val=t.StringVar();self.e4_val=t.StringVar()
+        self.e1_val=t.StringVar()
+        self.e2_val=t.StringVar()
+        self.e3_val=t.StringVar()
+        self.e4_val=t.StringVar()
         self.e1 = t.Entry(self.m,textvariable=self.e1_val);self.e2 = t.Entry(self.m,textvariable=self.e2_val)
         self.e3 = t.Entry(self.m,textvariable=self.e3_val);self.e4 = t.Entry(self.m,textvariable=self.e4_val)
         # text area
         self.t1= t.Text(self.m,height=10,width=55)
         #Buttons
-        self.b1= t.Button(self.m,text="View all",height=1,width=10,command = self.view_all);self.b2= t.Button(self.m,text="Search entry",height=1,width=10,command = self.search_entry)
-        self.b3= t.Button(self.m,text="Add entry",height=1,width=10,command=self.add_entry);self.b4= t.Button(self.m,text="Update selected",height=1,width=10,command=self.update_entry)
-        self.b5= t.Button(self.m,text="Delete selected",height=1,width=10,command = self.delete_entry);self.clear= t.Button(self.m,text="Clear All",height=1,width=10,command = self.clear_all)
+        self.b1= t.Button(self.m,text="View all",height=1,width=10,command = self.view_all)
+        self.b2= t.Button(self.m,text="Search entry",height=1,width=10,command = self.search_entry)
+        self.b3= t.Button(self.m,text="Add entry",height=1,width=10,command=self.add_entry)
+        self.b4= t.Button(self.m,text="Update selected",height=1,width=10,command=self.update_entry)
+        self.b5= t.Button(self.m,text="Delete selected",height=1,width=10,command = self.delete_entry)
+        self.clear= t.Button(self.m,text="Clear All",height=1,width=10,command = self.clear_all)
         # scroll bar
         scrollb = t.Scrollbar(self.m, command=self.t1.yview)
         scrollb.grid(row=4, column=2,columnspan=3)
